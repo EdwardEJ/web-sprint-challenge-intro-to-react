@@ -1,16 +1,18 @@
-// Write your Character component here
 import React from 'react'
 
 const Character = (props) => {
+  const { close, info } = props;
 
-  const { info } = props;
-
+  console.log(info)
   return (
-    <div className="charContainer">
-      {info.name}
-      <button >{info.birth_year}</button>
+    <div className='detailsContainer'>
+      {
+        <p>Gender: {info.gender}</p>
+      }
+      <button onClick={close}>Close</button>
     </div>
   )
+
 }
 
 export default Character
